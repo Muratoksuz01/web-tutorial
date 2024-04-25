@@ -1,0 +1,6 @@
+[
+    {"firstname":"murat","lastname":"öksüz","age":251,"redirect":true},
+    {"firstname":"sibel","lastname":"öksüz","age":241,"redirect":false},
+    {"firstname":"mehemt","lastname":"öksüz","age":241,"redirect":true},
+    {"firstname":"sadiye","lastname":"öksüz","age":221,"redirect":true}
+  ]
