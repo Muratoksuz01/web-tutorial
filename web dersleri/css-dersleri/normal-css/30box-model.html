@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- 
+        font-family ile font degisir varsayılan fontlar icin w3  site bakabilirsin ozel olması icin 
+        google fonts diyip oradan css kodunu veriyor sana 
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 5px 20px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #d1d1d1;
+        }
+        #container {
+            width: 1140px;
+            padding: 5px;
+            background-color: white;
+            position: relative;
+            overflow: hidden; /* This helps to contain floated children */
+        }
+        #blog-post-container {
+            width: 75%;
+            float: left;
+        }
+        #others-posts {
+            width: 25%;
+            position: absolute; /* Positioning relative to #container */
+            top: 80px;
+            right: 10px ; /* Aligns to the right edge of #container */
+            background-color: red;
+            padding: 10px;
+        }
+        #autor-box {
+            border: 2px solid red;
+            margin-top: 20px;
+            clear: both; /* Ensures it stays below the floated content */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .date {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        .blog-post {
+            position: relative;
+        }
+        ul > li {
+            list-style: none;
+            display: inline;
+        }
+        .blog-text {
+            margin-right: 5px;
+        }
+        #autor-box img {
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .autor-text {
+            
+            margin-top: 0px;
+        }
+        .blog-post img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+     
+
+        <div id="blog-post-container">
+            <div class="blog-post">
+                <h2>myfirstblog post</h2>
+                <p class="date">101010</p>
+                <img src="pc.jpeg" alt="">
+                <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis numquam soluta perferendis enim nemo, veritatis quo distinctio adipisci qui repellat sint, alias nihil at incidunt? Deleniti voluptatibus recusandae aliquam animi!<br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem molestiae consequuntur laboriosam vitae, adipisci incidunt nisi dolore necessitatibus earum soluta tempore voluptatum impedit fuga, expedita error deserunt sequi at doloremque. </p>
+                <ul class="tags">
+                    <li><a href="">C#</a></li>
+                    <li><a href="">java</a></li>
+                    <li><a href="">python</a></li>
+                    <li><a href="">knockout</a></li>
+                    <li><a href="">js</a></li>
+                </ul>
+            </div>
+         </div>
+        <div id="others-posts">
+            <p class="other">Lorem ipsum dolor sit amet.</p>
+            <p class="other">Lorem ipsum dolor sit amet.</p>
+            <p class="other">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div id="autor-box">
+            <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="">
+            <p class="autor-text">Lorem.</p>
+        </div>
+    </div>
+</body>
+</html>

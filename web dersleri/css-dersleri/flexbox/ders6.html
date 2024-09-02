@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navigation{
+            display: flex;
+            list-style: none;
+            padding-right: 5px;
+            padding-top:35px;
+            padding-bottom:35px;
+            background-color: goldenrod;
+            justify-content: flex-end;
+        }
+
+
+        @media (max-width:1200px){
+            .navigation{
+                justify-content: space-around;
+            }
+        }
+        @media  screen and (max-width:800px) {
+            .navigation {
+                flex-direction: column;
+            }
+            .navigation li{
+                border-bottom : 1px solid #fff;
+                width: 100%;
+                text-align: center;
+            }      
+        }
+        .navigation li{
+            margin-left: 25px;
+            font-size: 25px;
+        }
+        .navigation a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+       
+       
+       
+    </style>
+</head>
+<body>
+    <ul class="navigation">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Product</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+
+
+
+</body>
+</html>

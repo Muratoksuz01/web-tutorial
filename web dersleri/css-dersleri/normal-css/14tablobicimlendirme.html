@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            width: 100%;
+          }
+      
+        thead th {
+            padding: 20px; /* Adjust as needed */
+            background-color: rgb(38, 38, 114);
+            height: 50px;
+            color: white;
+        }
+        tbody>tr:nth-of-type(odd){
+            background: gray;
+
+        }
+        tbody>tr:hover{
+            background-color: red;
+        }
+        body{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr class="column">
+                <th>Name</th>
+                <th>description.</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>product 1</th>
+                <th>Lorem ipsum dolor sit amet.</th>
+                <th>$10</th>
+            </tr>
+            <tr>
+                <th>product 1</th>
+                <th>Lorem ipsum dolor sit amet.</th>
+                <th>$10</th>
+            </tr>
+            <tr>
+                <th>product 1</th>
+                <th>Lorem ipsum dolor sit amet.</th>
+                <th>$10</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

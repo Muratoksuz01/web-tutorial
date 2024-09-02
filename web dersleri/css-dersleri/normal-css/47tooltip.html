@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 100px;
+    }
+    .border{
+        border: 1px solid rgb(0,0,0,.125);
+        padding: 10px;
+        margin-right: 50px;
+    }
+    .tooltip .text{
+        display: none;
+        width: 120px;
+        background: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+    }
+    .top{
+        bottom: 120%;
+        left:0%;
+    }
+    .left{
+        bottom: 7%;
+        right: 110%;
+    }
+    .bottom{
+        top: 110%;
+        left: 5%;
+    }
+    .right{
+        bottom: 15%;
+        left: 120%;
+    }
+    .tooltip{
+        position: relative;
+    }
+    .tooltip:hover .text{
+        display: inline-block;
+    }
+
+
+.arrow-up{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin-bottom: 100px;
+
+  
+    
+    
+}
+.arrow-up:hover{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    background-color: transparent;
+   border-width: 5px;
+    transition: width 1s height 1s;
+
+}
+.up{
+    border-color: transparent transparent black transparent;
+}
+.down{
+    border-color: black transparent transparent transparent;
+}
+.ri{
+    border-color: transparent black transparent transparent;
+}
+.le{
+    border-color: transparent transparent transparent black;
+}
+
+</style>
+<body>
+
+    <span class="tooltip border">
+        tooltip top
+        <span class="text top">tooltip text</span>
+    </span>
+    <span class="tooltip border">
+        tooltip right
+        <span class="text right">tooltip text</span>
+    </span>
+    <span class="tooltip border">
+        tooltip bottom
+        <span class="text bottom">tooltip text</span>
+    </span>
+    <span class="tooltip border">
+        tooltip left
+        <span class="text left">tooltip text</span>
+    </span>
+
+
+    <hr>
+    <br><br><br><br>
+    <div class="arrow-up up"></div>
+    
+    <div class="arrow-up down"></div>
+    <div class="arrow-up ri"></div>
+    <div class="arrow-up le"></div>
+
+</body>
+</html>
