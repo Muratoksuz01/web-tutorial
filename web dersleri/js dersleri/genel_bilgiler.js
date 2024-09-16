@@ -2,6 +2,14 @@
 // float ve number ifadeler burada NUmber olarak geciyor 
 // dizi ve {} bunlar ise object olarak geciyor 
 
+// window nesnesi ile tarayıcıda bircok alana mudahale edebiliyoruz 
+// domain kısmı vs. hatta tanımladıgın tum degerler foksiyomlar bunun bir parametresi oluyor  ,scroll barin nerede oldugunu 
+var b= prompt("bir sayı gir ");
+console.log(b);//kullanıcıdsan sayı girmesi istenildiginde 
+val=confirm("emin misin ")//kontol iicn
+console.log(val)
+
+
 //const { time } = require("console")
 
 //const { futimes } = require("fs")
