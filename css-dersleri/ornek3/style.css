@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    font-size: 1rem;
+    
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.section-one{
+    background-image: url("https://yt-food-website.netlify.app/images/home.jpg");
+    background-size: cover;
+    height:100vh; 
+    position: relative;
+}
+.section{
+    background-color:#E84242;
+    padding-top: 2.5px;
+    padding-bottom: 25px;
+    
+}
+#title{
+    border-bottom: 1px solid #fff;
+    margin-bottom: 2.5rem;
+
+}
+#title h2{
+    font-weight: 600    ;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: black;
+}
+.fw-600{
+    font-weight: 600;
+}
+
+.container{
+    width: 90%;
+    margin:  0 auto;
+}
+
+/* header start */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+}
+nav{
+    display: flex;
+    padding: 10px; /* İç boşluklar */
+    border-radius: 75px;
+    background-color: #fff;
+    width: 100%; /* Container'ın genişliğini kullan */
+    box-sizing: border-box; /* Padding'in genişliğe eklenmesini önler */
+    margin: 0 auto; /* Container içinde ortalamak için */
+    margin-top: 15px;
+    justify-content: space-evenly   ; /* İçerideki elemanları dağıtmak için */
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    column-gap: 2.5rem;
+    align-items: center;
+    list-style: none;
+}
+nav ul li{
+    padding: 1px;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+nav ul li:hover{
+    border-bottom: 1px solid #e84242 ;
+}
+nav ul li.active{
+    border-bottom: 1px solid #e84242;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+nav .logo img{
+    width: 100px;
+}
+nav .nav-buttons i{
+    padding: 5px;
+    font-size: 1.5rem;
+}
+nav .nav-buttons .mobile-bars{
+    display: none;
+}
+/* header end */
+/*hidden search input start */
+div.searchi {
+    margin-right: 200px;
+    padding: 15px 2px;
+    float: right;
+    display: none;
+}
+#active {
+    display: inline-block;
+}
+div.search {
+    position: relative; /* Positioning for the icon */
+    width: 400px; /* Adjust width as needed */
+}
+div.search input {
+    width: 100%;
+    padding: 15px 40px 15px 15px; /* Padding: left, right, and top/bottom */
+    border: none; /* Removing border */
+    outline: none; /* Removing outline */
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+    border-radius: 25px; /* Optional: rounded corners */
+    background-color: white; /* Background color for the input */
+}
+div.search i {
+    position: absolute;
+    right: 15px; /* Positioning the icon inside the input field */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+/*hidden search input start */
+/*hidden chechout start*/
+.checkout{
+    position: relative;
+    top: -10px;
+    margin-right: 150px;
+    display: none;
+    float: right;
+    background-color: white;
+    width: 350px;
+    height: calc(100vh - 190px);
+}
+.checkout ul{
+    list-style: none;
+}
+.checkout ul li .image img{
+    width: 90px;
+}
+.checkout ul li{
+    display: flex;
+    padding: 5px;
+    transition: box-shadow 0.3s;
+}
+.checkout ul li:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+li .detail{
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+li .detail h3{
+    font-size: 1.2rem;
+}
+li .detail p{
+    margin-top: 10px;
+    font-size: 1rem;
+}
+.checkout-x{
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: 5px;
+}
+.checkout button{
+    margin-top: 5px;
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 20px 30px;
+    transition: opacity 0.4s;
+}
+.checkout button:hover{
+    opacity: 0.89;
+}
+/*hidden chechout end*/
+/* content start*/
+.content-home{
+    row-gap:80px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 45%;
+    float: left;
+}
+.content-home h2{
+    font-size: 4rem;
+    font-weight: 500;
+}
+.content-home p{
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    opacity: .6;
+}
+.content-home a{
+    padding: 25px;
+    display: inline;
+    background-color: black;
+    color: #fff;
+    width: 100px;
+    border-radius: 55px;
+    text-align: center;
+    font-size: 1rem;
+}
+/* content end*/
+/*ourmenu start*/
+
+.content-ourMenu ul{
+    list-style:none;
+    display: flex;
+}
+.content-ourMenu  .item li img{
+    width: 100%;
+}
+
+.ourMenu .blogs .blog{
+    width: 25%;/*                                               burası degişecek */
+    border-radius: 25px;
+    background-color: #fff;
+    margin: 15px 20px;
+}
+
+.ourMenu .blog .item{
+    display: flex;
+    padding: 25px;  
+    flex-direction: column;
+    row-gap: 15px;
+}
+.ourMenu .item .small{
+    font-size: .9rem;
+}
+.ourMenu .item h3{
+    font-weight: 600;
+    font-size: 2rem;
+}
+.ourMenu .item p{
+    display: inline;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+.ourMenu .item span{
+    text-decoration: line-through;
+}
+.ourMenu .item .price{
+    font-size: 1.1rem;
+}
+
+.ourMenu .item button{
+    padding: 20px;
+    background-color: black;
+    border-radius: 35px;
+    color: #fff;
+    font-size: 1rem;
+}
+/*ourmenu end*/
+/*our products start*/
+.content-ourProduct .blogs {
+    list-style: none;
+    display: flex;
+}
+
+.content-ourProduct .item li img {
+    width: 100%;
+}
+
+.ourProduct .blogs .blog {
+    width: 30%; /* Yüzde oranıyla ayarladım, böylece 3 item aynı satırda yerleşir */
+    border-radius: 25px;
+    background-color: #fff;
+    margin: 15px 20px;
+    
+}
+
+.ourProduct .blog .item {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+}
+
+.ourProduct .item .small {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.ourProduct .item h3 {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.ourProduct .item p {
+    display: inline;
+    margin-right: 10px;
+}
+
+.ourProduct .item span {
+    text-decoration: line-through;
+}
+
+.ourProduct .item .price {
+    font-size: 2.1rem;
+}
+
+.ourProduct .item .feature {
+    font-size: .8rem;
+    font-weight: 400;
+}
+.ourProduct .blog .last-item {
+    background-image: url("https://yt-food-website.netlify.app/images/dark-product.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 93%;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.ourProduct .item .alt-bar {
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.ourProduct .alt-bar .left p {
+    display: block;
+}
+.ourProduct .item .alt-bar button {
+    padding: 15px;
+    border: 1px solid #E84242;
+    background-color: transparent;
+    border-radius: 50%;
+    color: #E84242;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/*our products end*/
+/* about us start*/
+.content-aboutUs ul{
+    display: flex;
+    list-style: none;
+}
+.content-aboutUs ul li{
+    width: 50%;
+    padding: 15px;
+}
+.content-aboutUs ul li img{
+    width: 100%;
+}
+.content-aboutUs li.right{
+        color: #ccc;
+}
+.content-aboutUs li.right h2{
+    color: #fff;
+}
+.content-aboutUs li.right h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.content-aboutUs li.right p{
+    margin: 25px 0;
+    font-size: 1rem;
+    line-height: 25px;
+}
+.content-aboutUs li.right button{
+    background-color: black;
+    color: #fff;
+    border-radius: 35px;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    border: none;
+}
+/* about us end*/
+/*costumer rewıew start*/
+.content-ourRewiew {
+padding: 5px;
+}
+.content-ourRewiew .blogs{
+    display: flex;
+}
+.content-ourRewiew .blog{
+    background-color: #fff;
+    border-radius: 25px;
+    width: 33%;
+    margin-right: 15px;
+}
+.content-ourRewiew .blog .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    row-gap: 12px;
+}
+.content-ourRewiew .item .image img {
+    height: 200px;
+}
+.content-ourRewiew .item li p{
+    font-size: 1rem;
+    text-align: center;
+}
+.content-ourRewiew li.name p {
+    color: #E84242;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.content-ourRewiew li img.avatar{
+    border-radius: 100px;
+    height: 75px;
+}
+.content-ourRewiew li.stars i {
+    color: #FFD700;
+    font-size: 1rem;
+}
+/*costumer rewıew end*/
+/* contact us start*/
+.contentContact{
+display: flex;
+}
+.contentContact>div{
+    display: inline-block;
+    width: 50%;
+
+}
+.contentContact .left{
+    background-color: blue;
+   
+    
+}
+.contentContact .right{
+    background-color: black;
+    padding:  20px 20px;
+box-sizing: border-box;
+
+}
+.contentContact .right h2{
+    margin-top: 5px;
+    padding: 10px;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.contentContact .right form .input {
+    display: flex;
+    align-items: center; /* İkon ve inputları aynı hizaya getirmek için */
+    position: relative;
+}
+.contentContact .right form .input:last-child{
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+.contentContact .right form i {
+    color: white;
+    font-size: 1.5rem; /* İkon boyutunu ayarlamak için */
+}
+
+.contentContact .right form input {
+    height: 70px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    background-color: black;
+    color: #fff;
+    padding-left: 45px; /* Input içinde ikonlara yer açmak için soldan boşluk bırakın */
+    box-sizing: border-box; /* Kenarlıklar dahil genişliği doğru ayarlamak için */
+}
+
+.contentContact .right form .input i {
+    position: absolute; /* İkonları inputların soluna sabitlemek için */
+    left: 15px; /* Sol kenardan boşluk */
+    top: 50%; /* Yarıya hizalamak için */
+    transform: translateY(-50%); /* Tam ortalamak için */
+}
+.contentContact .right form button{
+    background-color: #FFFFFF;
+    color: #E84242;
+    border-radius: 45px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 15px;
+    border: none;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+/* contact us end*/
+/*blog start*/
+.ourBlog .blogs{
+display: flex;
+column-gap: 25px;
+}
+.ourBlog .blogs .blog{
+    width: 33%;
+    background-color: #fff;
+    border-radius: 35px;
+}
+.ourBlog .blog .item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+.ourBlog .item .image img{
+    border-top-left-radius:35px ;
+    border-top-right-radius:35px ;
+    width: 100%;
+    transition: transform 1s;
+}
+.ourBlog .item:hover .image img{
+   transform:scale(1.1);
+}
+.ourBlog .item li:not(:first-child){
+    padding-left: 10px;
+}
+.ourBlog .item li>h3 {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.ourBlog .item li.feature p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;    
+}
+.ourBlog .item li.comment p{
+    font-size: 1rem;
+    opacity: 0.25;    
+}
+.ourBlog .item li>button{
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 45px;
+    background-color: black;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/*blog end*/
+
+
+/*footer start*/
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 30px;
+}
+footer .footerSearch{
+    margin-top: 15px;
+    display: flex;
+    column-gap: 15px;
+    align-items: baseline;
+}
+footer .footerSearch input{
+    height: 40px;
+    width: 300px;
+    border-radius: 35px;
+    padding: 5px;
+}
+footer .footerSearch button{
+    font-size: 1rem;
+    background-color: #E84242;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 55px;
+}
+footer .footerSearch button:hover{
+    opacity: .9;
+}
+footer  ul{
+    display: flex;
+    column-gap: 10px;
+    list-style: none;
+}
+footer .links ul li a{
+    color: #fff;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    padding: 15px;
+    border-radius: 55px;
+    text-decoration: none;
+}
+footer .links ul li a:hover{
+    background-color: #E84242;
+}
+footer .navbar2 li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: #E84242;
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+footer .navbar2 li:first-child a{
+    background-color: black;
+}
+footer .navbar2 li a:hover{
+    opacity: .9;
+}
+footer .created{
+    padding-bottom: 25px;
+}
+footer .created p{
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #fff;
+}footer .created p a{
+    color: #E84242;
+}
+/*footer end*/
+
+
+/*
+992 font dusur
+768 navbar gizle fontdusur
+578 font dusur
+522 her itemi genişlik 100yap 
+
+*/

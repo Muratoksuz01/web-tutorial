@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #f2f2f2;
+        }
+        .card{
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 2px;
+            margin: 20px;
+            display: inline-block;
+        }
+        .card-1{
+            box-shadow: 10px 10px;
+        }
+        .card-2{
+            box-shadow: 10px 10px 10px;
+        }
+        .card-3{
+            box-shadow: 10px 10px 10px 16px rgb(0, 0,0,.4);
+        }
+        .card-4{
+        }
+        .card-4:hover{
+            box-shadow: 10px 10px 10px 16px rgb(0, 0,0,.4);
+        }
+        .card-5{/*iki shadow ust uste geldi*/
+            box-shadow: 10px 10px 10px 16px rgb(0, 0,0,.4),
+            10px 10px 10px 16px rgb(0, 0,0,.4);
+            
+        }
+        .shadow{display: none;}/*                           buraya bak acmak icin*/
+
+
+        .d1{
+            display: none;/*                                        buraya bak*/
+
+        }
+        .t-card{
+            width: 150px;
+            height: 150px;
+            background: blue;
+            margin-bottom: 100px;
+            color:white;
+            font-size: 20px;
+        }
+        .t-card:hover{
+            width: 500px;
+            transition: width 2s;
+        }
+        .t-card-1{
+            width: 150px;
+            height: 150px;
+            background: blue;
+            transition: width 2s,height 2s,background 1s ;
+            transition-delay: 1s;/*bu ise işlemi yapmak icin kac sn bekleyeyim diyor */
+        }
+        .t-card-1:hover{
+            width: 500px;
+            height: 500px;
+            background: red;
+        }
+
+        #card1{
+            transition-timing-function: ease;/*varsayılan  burası sureyi yukarıda belirtiyoruz tamam ama nerede hızlandıgı nerede yavasladıgıın burada belirliyoruz */
+        }
+        #card2{
+            transition-timing-function: linear;
+        }
+        #card3{
+            transition-timing-function: ease-in;
+        }
+        #card4{
+            transition-timing-function: ease-out;
+        }
+        #card5{
+            transition-timing-function: ease-in-out;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="shadow">
+        <h2>shadow dersi</h2>
+        <div class="card card-1"></div>
+        <div class="card card-2"></div>
+        <div class="card card-3"></div>
+        <div class="card card-4"></div>
+        <div class="card card-5"></div>
+        <div class="card card-6"></div>
+    </div>
+    <div class="transition">
+        <h2 class="d1">ders 1 nin konuları</h2>
+
+        <div class="d1 t-card"></div>
+        <div class="d1 t-card t-card-1 "></div>
+
+        <h2 class="d2">ders 2 nin konuları</h2>
+        <div class="d2 t-card" id="card1">ease</div>
+        <div class="d2 t-card" id="card2">linear</div>
+        <div class="d2 t-card" id="card3">ease-in</div>
+        <div class="d2 t-card" id="card4">ease-out</div>
+        <div class="d2 t-card" id="card5">ease-in-out</div>
+
+
+
+    </div>
+</body>
+</html>

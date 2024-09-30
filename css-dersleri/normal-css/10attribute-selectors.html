@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p[title='ali'][target='a']{
+            background-color: red;
+        }
+    
+
+        
+
+   
+    </style>
+</head>
+<body>
+<!-- 
+      p[title~=ek]{/* aslında tam ismi yazmak gerekir ama bu 'ek varsa onu dahil ediyor  herhangi bir yerinde '*/
+        color: aqua;
+      }
+ p[title^="a"]{/*'a' ile baslayan  */
+        color: green;
+    }
+    p[title$=le]{/* le ile biten */
+        color: yellow;
+    }
+
+           p[title]{
+        border: 1px solid red;
+        padding: 160px;/* iceriign kendi kutusuyla boslugu*/
+        margin: 100px;/* kutunun diger kusularla arasındaki bosluk*/
+        }
+
+
+        p{
+            border: 2px solid yellow;
+        }
+        p[title="ali"]{
+            background-color: green;
+            border: 3px solid gray;
+
+            } 
+-->
+
+    <p title="baslık ek" target="a">title bulunan</p>
+    <p title="ali">title ali ama</p>
+    <p>paragraf1 </p>
+</body>
+</html>

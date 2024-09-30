@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+#gallery{
+    width: 1200px;
+    margin: 20px auto; 
+}
+.gallery-item{
+    
+    border: 1px solid red;
+}
+.gallery-item:hover{
+    border: 1px solid #ccc;
+
+}
+.gallery-item img{
+    width: 100%;
+    height: 200px;/*sade bunu kullandıgımızda resim biraz basık gorunuyor */
+ /*https://www.w3schools.com/css/css3_object-fit.asp*/
+    object-fit: cover;/*sağdan soldean kırpar */
+    object-fit: fill;/*varsayılan*/
+    object-fit: contain;
+}
+.description{
+    text-align: center;
+    padding: 10px;
+}
+.item-container{
+    padding: 5px;
+    width: 25%;
+    float: left;
+
+}

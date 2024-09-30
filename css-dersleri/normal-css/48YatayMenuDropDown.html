@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+    }
+    li{
+        display: inline-block;
+        float: left;
+        margin-right: 1px;
+    }
+    li a{
+        display: block;
+        background: #2f3036;
+        min-width: 140px;
+        color: #fff;
+        text-decoration: none;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    }
+    li a:hover{
+        background: #19c589;
+    }
+    li:hover ul a{
+        background: #f3f3f3;
+        color: black;
+        height: 40px;
+        line-height: 40px;
+    }
+    li.hover ul a:hover{
+        background: #19c589;
+        color: #fff;
+    }
+
+    </style>
+</head>
+<body>
+   
+    <ul>
+        <li><a href="">Anasayfa</a></li>
+        <li><a href="">hakkımızda</a></li>
+        <li><a href="">kurslar</a>
+            <ul class="hidden">
+                <li><a href="">pyhton</a></li>
+                <li><a href="">java</a></li>
+                <li><a href="">c#</a></li>
+                <li><a href="">Lorem, ipsum dolor.</a></li>
+            </ul>
+        </li>
+        <li><a href="">makale</a></li>
+        <li><a href="">iletiişim</a></li>
+    </ul>
+
+
+</body>
+</html>

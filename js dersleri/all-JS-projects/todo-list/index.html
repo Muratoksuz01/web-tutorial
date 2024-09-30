@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>ToDo list <img src="todolist.png" alt=""></h2>
+            <div class="row">
+                <input type="text"  id="input-box" placeholder=" Add your task">
+                <button id="btn">add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        var ul=document.getElementById("list-container")
+       var btn=document.getElementById("btn")
+        showTask()
+        btn.addEventListener("click",()=>{
+            let input_text=document.getElementById("input-box").value || "null deger"
+            var li=document.createElement("li")
+            li.textContent=input_text
+            li.addEventListener("click", toggleChecked);
+            ul.appendChild(li)
+            let span=document.createElement("span")
+            span.innerHTML="\u00d7"
+            span.addEventListener("click",deleteTask)
+            li.appendChild(span)
+            saveData()
+            document.getElementById("input-box").value = "";
+        })
+        function toggleChecked(event) {
+            console.log("class ekle ")
+
+            const li = event.target;
+            li.classList.toggle("checked");
+            saveData()
+        }   
+        function deleteTask(event){
+            console.log("delete task ")
+
+            const li = event.target;
+            event.target.parentElement.remove( )
+            saveData()
+        } 
+        function saveData(){
+            localStorage.setItem("data",ul.innerHTML)
+        }
+        function showTask(){
+            console.log("show task")
+            ul.innerHTML=localStorage.getItem("data") || ""
+        }
+        
+      
+    </script>
+</body>
+</html>

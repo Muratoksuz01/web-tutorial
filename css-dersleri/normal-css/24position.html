@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* varsayılan olarak static olarak gelir 
+        position:relative > div normalde nerede ise sayfa icinde oradaya gore posizyon alır  
+        position:absolute> dediginde div normal ekisin disina cıkar ve ilk ust kutucuklarda relative nesnesine gore posisyon alır bu genellikle body olur 
+        baska div olup position relative ise ona gore sectigimiz div kendini hizalar 
+        position:fixed >bottom 0 degidinde scroll bar ile asagı kaydırdıgında gormeye devam edersin 
+        aynı sekli absolte ile de yaparssın ama onda asagı kaydırdıgında gorunmez 
+        position:sticky > diyip top=0 dersen fixed e benzer asagı indginde yukardıa kalır 
+        */
+        .box{
+            width: 120px;
+            height: 120px;
+        }
+        
+        /*
+
+
+        #first{
+            background-color: red;
+        }
+        #second{
+            background: blue;
+            position: relative;
+            top: 50px;
+            left: 30px;
+        }
+        #third{
+            background-color: green;
+        }
+            */
+            /*
+            .mbox{          mbox baktı  en yakın ust kutuya positionu relative olan #second ı buldu ona gore kendini ayarladı 
+                width: 30px;
+                height: 30px;  
+                background-color: yellow;
+                position: absolute;
+                top: 50px;
+                right: 50px;
+            } 
+            #first{
+                background-color: red;
+            }
+            #second{
+                background: blue;
+                position: relative;
+            }
+            #third{
+                background-color: green;
+            }   
+                */     
+            /*    .mbox{        
+                    width: 30px;
+                    height: 30px;  
+                    background-color: yellow;
+                    position: absolute;
+                    top: 50px;
+                    right: 50px;
+                } 
+                #first{
+                    background-color: red;
+                }
+                #second{
+                    background: blue;
+                    position: relative;
+                }
+                #third{          
+                    background-color: green;
+                    position: fixed; dedigin icin sayfayı kaydırsan da bu asagıda gorunecek absolute deseydin asagı kaydıgda kutuda asagı kaymazdı 
+                    bottom: 0;
+                    right: 0;
+                }       */
+           
+                #first{ asagı kaydırsan da fixed gibi oldugu yerde kalır menulerde kullanılır 
+                    background-color: red;
+                    width: 100%;
+                    position: sticky;
+                    top: 0;
+                }
+                #second{
+                    background: blue;
+                }
+                #third{          
+                    background-color: green;
+                } 
+
+        </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum quo totam ut porro eveniet dolores animi aspernatur possimus placeat. Ullam laborum itaque pariatur ducimus odit dolorum minus laudantium perspiciatis exercitationem.</p>
+    <div class="box" id="first">box 1</div>
+    <div class="box" id="second">
+        <div class="mbox"></div>
+    </div>
+    <div class="box" id="third">box 3</div>
+    <div style="height: 20000px;"></div>
+</body>
+</html>

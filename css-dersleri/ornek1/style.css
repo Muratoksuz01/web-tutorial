@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+}
+.container{
+    position: relative;
+}
+.bg{
+    width: 100%;
+    object-fit: contain;
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2.5rem;
+    opacity: .7;
+    background-color: #89AED3;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 1rem;
+    padding-bottom: 0;
+    color: #fff;
+}
+nav ul li:first-child{
+    justify-self: flex-start;
+    margin-right: auto;
+    font-size: 2.5rem;
+}
+nav ul li:not(:first-child):hover {
+    background-color: #FD6F00;
+}
+
+section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+section h1{
+    text-transform: capitalize;
+    font-size: 6.5rem;
+    color: black;
+    user-select: none;
+}
+section h3{
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    text-align: center;
+    color: #fff;
+}
+section ul{
+    margin-left: 25%;
+}
+section ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: .5rem;
+}
+section button{
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    background-color: #CD6058;
+    border-radius: 20px;
+    outline: none;
+}
+@media (max-width:1100px){
+    html{
+        font-size: 9px;
+    }
+}
+@media (max-width:900px){
+    html{
+        font-size: 8px;
+    }
+}
+@media (max-width:400px){
+    html{
+        font-size:3px;
+    }
+}
