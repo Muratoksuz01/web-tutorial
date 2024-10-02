@@ -34,6 +34,22 @@
         .eposta{
             border-top: 1px solid #a3a3a3;
         }
+        .form-check input{
+            border: 1px solid;
+        }
+
+
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 5s ease-out;
+          }
+      
+          .show {
+            opacity: 1;
+            transform: translateY(0);
+          }
     </style>
 </head>
   <body>
@@ -58,10 +74,10 @@
                     <img src="https://adasutrading.com/_assets/images/logo.png" alt="">
                 </a>    
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a href="" class="nav-link active">Ana Sayfa</a></li>
+                    <li class="nav-item"><a href="/" class="nav-link active">Ana Sayfa</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Hakkımızda</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Hizmetlerimiz</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Bize Ulaşın</a></li>
+                    <li class="nav-item"><a href="bize.html" class="nav-link">Bize Ulaşın</a></li>
                 </ul>
                 <div class="dropdown">
                     <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
@@ -112,13 +128,13 @@
       <main class="mb-5">
         <section class="mt-4">
             <div class="row ">
-                <div class="col-md-6 bg-light d-flex flex-column justify-content-center p-5 ">
+                <div class="col-md-6 bg-light d-flex flex-column justify-content-center p-5  hidden">
                     <h5 class="mb-5">Tekliflerin Alınması</h5>
                     <p>İhtiyacınıza özel çözümler sunmak için, taleplerinizi dikkatle değerlendiriyor 
                         ve en uygun teklifi sunuyoruz. Müşterilerimizin memnuniyeti her zaman önceliğimizdir.
                     </p>
                 </div>
-                <div class="col-md-6 p-0">
+                <div class="col-md-6 p-0 hidden">
                     <img src="https://adasutrading.com/_assets/images/tekliflerin-alinmas%C4%B1.jpg" style="width: 100%;" alt="">
 
                 </div>
@@ -127,10 +143,10 @@
 
         <section class="mt-4">
             <div class="row ">
-                <div class="col-md-6 p-0    ">
+                <div class="col-md-6 p-0  hidden  ">
                     <img src="https://adasutrading.com/_assets/images/taleplerin-toplanmasi.jpg" style="width: 100%;" alt="">
                 </div>
-                <div class="col-md-6 bg-light d-flex flex-column justify-content-center p-5 ">
+                <div class="col-md-6 hidden bg-light d-flex flex-column justify-content-center p-5 ">
                     <h5 class="mb-5">Tekliflerin Alınması</h5>
                     <p>İhtiyacınıza özel çözümler sunmak için, taleplerinizi dikkatle değerlendiriyor 
                         ve en uygun teklifi sunuyoruz. Müşterilerimizin memnuniyeti her zaman önceliğimizdir.
@@ -142,13 +158,13 @@
 
         <section class="mt-4">
             <div class="row ">
-                <div class="col-md-6 bg-light d-flex flex-column justify-content-center p-5 ">
+                <div class="col-md-6 bg-light hidden d-flex flex-column justify-content-center p-5 ">
                     <h5 class="mb-5">Tekliflerin Alınması</h5>
                     <p>İhtiyacınıza özel çözümler sunmak için, taleplerinizi dikkatle değerlendiriyor 
                         ve en uygun teklifi sunuyoruz. Müşterilerimizin memnuniyeti her zaman önceliğimizdir.
                     </p>
                 </div>
-                <div class="col-md-6 p-0">
+                <div class="col-md-6 hidden p-0">
                     <img src="https://adasutrading.com/_assets/images/%C3%BCr%C3%BCn-hizmet-teslimi.jpg" style="width: 100%;" alt="">
 
                 </div>
@@ -158,7 +174,7 @@
     
     <div class="position-relative">
         <img class="img-fluid w-100 " style="object-fit: cover; height: 400px; object-position: 80% 0; " src="https://adasutrading.com/_assets/images/sinirsiz-ticaret-potansiyeli.jpg" alt="">
-        <div class="content position-absolute top-50 start-50 translate-middle text-white">
+        <div class="content hidden position-absolute top-50 start-50 translate-middle text-white">
             <h5 class="text-center mb-3">Sınırsız Ticaret Potansiyeli</h5>
             <p class="text-center">AdaSu Trading, uluslararası pazarlarda ürünlerinizi etkili bir şekilde
                  tanıtmak, dış ticaret süreçlerinizi optimize etmek ve endüstriyel 
@@ -209,11 +225,11 @@
     </div>
 </div>
 
-<footer class="bg-dark text-white p-5 d-flex justify-content-between align-items-center">
+<footer class="bg-light text-white p-5  d-flex justify-content-around " style="">
     <span class="mx-auto text-center">
-        <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i>
+        <i class="fa-brands fa-linkedin" style="font-size: 20px; color: black;"></i>
     </span>
-    <p class="mb-0 texdt-end">AdaSu Dış Ticaret Ve Danışmanlık LTD.ŞTİ © 2023</p>
+    <p class="mb-0 text-dark">AdaSu Dış Ticaret Ve Danışmanlık LTD.ŞTİ © 2023</p>
 </footer>
 
 
@@ -224,7 +240,23 @@
     
     
     
-    
+    <script>
+    const sections = document.querySelectorAll('.hidden');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
