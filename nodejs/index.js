@@ -1,19 +1,27 @@
 const express=require("express")
 const app=express()
-app.use("/products/:id/:price",(req,res)=>{
-    res.send( "pdoducts"+req.params.id +" ve "+req.params.price)
-    //res.sendFile() //dosyada gonderebilirsin 
-})
+app.use(express.static("public"))
+app.use(express.static("node_modules"))
+app.set("view engine","ejs")
+const data=[
+    {id:1,name:"iphone 11",price: 100,isActive:true,imageUrl:"resim1.png"},
+    {id:2,name:"iphone 12",price: 200,isActive:false,imageUrl:"2.jpeg"},
+    {id:3,name:"iphone 13",price: 300,isActive:true,imageUrl:"3.jpeg"}
+]
+
 app.use("/products/:id",(req,res)=>{
-    res.send( req.params.id)
-    res.send("pdoducts")
+    const urun=data.find(u =>u.id == req.params.id)
+    res.render( "product-detail",urun)//urun bir obje old. sıkıntı yok 
 })
 app.use("/products",(req,res)=>{
-    res.send("pdoducts")
+    res.render("farkli/products",{ // data bir liste old icin hata alırsın 
+        urunler:data
+    })
 })
 app.use("/",(req,res)=>{
-    res.send("anasayfa")
+    res.render("ana")
 })
+
 
 app.listen(3000,()=>{
     console.log("server active")
