@@ -9,15 +9,19 @@
 
 </head>
 <body>
-    <h1>urunler</h1>
-    <br>
-    <ul>
-        <% urunler.forEach(element => { %>
-        <li>
-             <a href="/products/<%= element.id %>" > <span><%= element.name  %></span></a>
-            
-         </li>
-        <% }) %>
-    </ul>
+    <%- include('../partials/nav') %>
+
+   <div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+            <% urunler.forEach(urun => { %>
+             
+           
+       <%- include('../partials/urun',urun) %>    
+                
+            <% }) %>
+        </div>
+    </div>
+   </div>
 </body>
 </html>

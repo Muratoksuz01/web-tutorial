@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<body class="bg-primary">
-    <h2>product details</h2>
-    <h4><%= name %></h4>
-    <img src="/images/<%= imageUrl %>" width="400" alt="">
-    <h3><%= price %></h3>
+<body >
+    <%- include('partials/nav') %>
+    <div class="container">
+
+        <%- include('partials/urun') %>    
+    </div>  
+       
 </body>
 </html>
