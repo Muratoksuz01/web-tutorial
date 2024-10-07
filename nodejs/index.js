@@ -3,9 +3,8 @@ const app=express()
 app.use(express.static("public"))
 app.use(express.static("node_modules"))
 app.set("view engine","ejs")
-
+const Approuter=require("./router/users")
 const db=require("./data/db")
-
 const users = db.prepare('SELECT * FROM products').all();
 // console.log(users); //test icin
 
@@ -18,20 +17,16 @@ const users = db.prepare('SELECT * FROM products').all();
 
 
 data=users
-app.use("/products/:id",(req,res)=>{
-    const urun=data.find(u =>u.id == req.params.id)
-    res.render( "product-detail",urun)//urun bir obje old. sıkıntı yok 
-})
-app.use("/products",(req,res)=>{
-    res.render("farkli/products",{ // data bir liste old icin hata alırsın 
-        urunler:data
-    })
-})
-app.use("/",(req,res)=>{
-    res.render("ana",{urunler:data})
-})
 
 
+app.use(Approuter)
 app.listen(3000,()=>{
     console.log("server active")
 })
+
+
+
+/*
+form ,(orm=sequelize=mysql),admin paneli,mongoose,membership,restapi,tokenbased auth,publish
+bu yapılar hala ogrenilmedi 
+*/
